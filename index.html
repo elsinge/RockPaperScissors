@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper, Scissors</title>
 </head>
 <body>
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+    </header>
+    <main>
+        <h2>choose:</h2>
+        <div class="choices">
+            <button onclick="userChoose('rock')">Rock</button>
+            <button onclick="userChoose('paper')">Paper</button>
+            <button onclick="userChoose('scissors')">Scissors</button>
+            <button onclick="userChoose('lizard')" class="extended-game-mode">Lizard</button>
+            <button onclick="userChoose('spock')" class="extended-game-mode">Spock</button>
+        </div>
+        <button id="extended-game-mode-btn" onclick="enableExtendedGameMode()">Extended Game Mode</button>
+        <button id="classic-game-mode-btn" onclick="enableClassicGameMode()" class="extended-game-mode">Classic Game Mode</button>
+        <p>User chooses: <span id="user-choice-el"></span></p>
+        <button id="fight-btn" onclick="fight()" disabled>Fight</button>
+        <p id="computer-choice-el"></p>
+        <h2 id="winner-el"></h2>
+    </main>
+
+
 <script src="./index.js"></script>
 </body>
 </html>
