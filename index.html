@@ -6,27 +6,57 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
+<div id="wrapper">
     <header>
         <h1>Rock, Paper, Scissors</h1>
     </header>
+    <!--<div class="setup">
+
+    </div>-->
     <main>
-        <h2>choose:</h2>
-        <div class="choices">
-            <button onclick="userChoose('rock')">Rock</button>
-            <button onclick="userChoose('paper')">Paper</button>
-            <button onclick="userChoose('scissors')">Scissors</button>
-            <button onclick="userChoose('lizard')" class="extended-game-mode">Lizard</button>
-            <button onclick="userChoose('spock')" class="extended-game-mode">Spock</button>
+        <div class="game-elements">
+            <h3>Rounds left: <span id="rounds-el"></span></h3>
+            <h2>choose:</h2>
+            <div class="choices">
+                <button onclick="userChoose('rock')">Rock</button>
+                <button onclick="userChoose('paper')">Paper</button>
+                <button onclick="userChoose('scissors')">Scissors</button>
+                <button onclick="userChoose('lizard')" class="extended-game-mode">Lizard</button>
+                <button onclick="userChoose('spock')" class="extended-game-mode">Spock</button>
+            </div>
+            <div class="modes">
+                <button id="extended-game-mode-btn" onclick="enableExtendedGameMode()">Extended Game Mode</button>
+                <button id="classic-game-mode-btn" onclick="enableClassicGameMode()" class="extended-game-mode">Classic
+                    Game
+                    Mode
+                </button>
+            </div>
+            <p>User chooses: <span id="user-choice-el"></span></p>
+            <button id="fight-btn" onclick="fight()">Fight</button>
+            <p id="computer-choice-el"></p>
+            <h2 id="winner-el"></h2>
+            <button id="next-round-btn" onclick="nextRound()">Next Round</button>
+            <table id="stats-el">
+                <tr>
+                    <th colspan="3">Stats</th>
+                </tr>
+                <tr>
+                    <th>User</th>
+                    <th>Draws</th>
+                    <th>Computer</th>
+                </tr>
+                <tr>
+                    <td id="user-wins-el">0</td>
+                    <td id="draws-el">0</td>
+                    <td id="computer-wins-el">0</td>
+                </tr>
+            </table>
+            <h2 id="game-over-el"></h2>
         </div>
-        <button id="extended-game-mode-btn" onclick="enableExtendedGameMode()">Extended Game Mode</button>
-        <button id="classic-game-mode-btn" onclick="enableClassicGameMode()" class="extended-game-mode">Classic Game Mode</button>
-        <p>User chooses: <span id="user-choice-el"></span></p>
-        <button id="fight-btn" onclick="fight()" disabled>Fight</button>
-        <p id="computer-choice-el"></p>
-        <h2 id="winner-el"></h2>
     </main>
 
 
-<script src="./index.js"></script>
+    <script src="./index.js"></script>
+</div>
 </body>
 </html>

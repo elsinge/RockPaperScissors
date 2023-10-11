@@ -1,3 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-image: url("rps_bg.png");
+}
+
+header {
+    height: 70px;
+    background-color: rgb(0 0 0 / .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    /*width: 50px;*/
+    padding: 2px 5px;
+    margin: 10px 0;
+}
+
+table {
+    width: 300px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    width: 33%;
+}
+
+td {
+    text-align: center;
+}
+
+#wrapper {
+    width: 300px;
+    margin: 0 auto;
+    background-color: rgb(255 255 255 / .5);
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    /*margin: 5px 0;*/
+}
+
+.modes {
+    /*margin: 10px 0;*/
+}
+
 .extended-game-mode {
     display: none;
 }
