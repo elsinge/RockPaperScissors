@@ -1,19 +1,7 @@
 const choices = new Map([
-    ["rock",
-        {
-            beats: ["scissors", "lizard"]
-        }
-    ],
-    ["paper",
-        {
-            beats: ["rock", "spock"]
-        }
-    ],
-    ["scissors",
-        {
-            beats: ["paper", "lizard"]
-        }
-    ]
+    ["rock", {beats: ["scissors", "lizard"]}],
+    ["paper", {beats: ["rock", "spock"]}],
+    ["scissors", {beats: ["paper", "lizard"]}]
 ]);
 
 let rounds;
@@ -65,6 +53,7 @@ let statsEl = document.getElementById("stats-el");
 statsEl.style.display = "none";
 
 drawUI();
+
 function drawUI() {
     nextRoundBtn.disabled = true;
     fightBtn.disabled = true;
@@ -104,12 +93,12 @@ function enableClassicGameMode() {
     }
 }
 
-function userChoose(choice){
+function userChoose(choice) {
     user.choice = choice;
     updateUserGUI(choice);
 }
 
-function updateUserGUI(choice){
+function updateUserGUI(choice) {
     userChoiceEl.innerText = choice;
     document.getElementById("fight-btn").disabled = false;
 }
@@ -118,6 +107,7 @@ function getRandomChoice(choices) {
     let values = Array.from(choices);
     return values[Math.floor(Math.random() * values.length)][0];
 }
+
 function fight() {
     document.getElementById("fight-btn").disabled = true;
 
