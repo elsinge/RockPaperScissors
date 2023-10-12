@@ -56,6 +56,11 @@ function setRounds() {
     gameElements.style.display = "block";
 }
 
+function changeBackground() {
+    document.getElementsByTagName("body")[0].style.background = "url('https://picsum.photos/1600/900')";
+    document.getElementById("change-bg-btn").style.display = "none";
+}
+
 let statsEl = document.getElementById("stats-el");
 statsEl.style.display = "none";
 
