@@ -45,7 +45,7 @@ function setRounds() {
 }
 
 function changeBackground() {
-    document.getElementsByTagName("body")[0].style.background = "url('https://picsum.photos/1600/900')";
+    document.getElementsByTagName("body")[0].style.background = "url('https://picsum.photos/1600/900') fixed center/cover no-repeat";
     document.getElementById("change-bg-btn").style.display = "none";
 }
 
