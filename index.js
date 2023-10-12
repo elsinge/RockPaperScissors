@@ -6,37 +6,33 @@ const choices = new Map([
 
 let rounds;
 console.log("rounds=" + rounds);
-/*let extendedGameMode = false;
-if (extendedGameMode) {
-    choices.set("lizard", {beats: ["paper", "spock"]});
-    choices.set("spock", {beats: ["rock", "scissors"]});
-}*/
+
 let draws = 0;
-let nextRoundBtn = document.getElementById("next-round-btn");
-let fightBtn = document.getElementById("fight-btn");
-let userChoiceEl = document.getElementById("user-choice-el");
-let computerChoiceEl = document.getElementById("computer-choice-el");
-let roundsEl = document.getElementById("rounds-el");
+const nextRoundBtn = document.getElementById("next-round-btn");
+const fightBtn = document.getElementById("fight-btn");
+const userChoiceEl = document.getElementById("user-choice-el");
+const computerChoiceEl = document.getElementById("computer-choice-el");
+const roundsEl = document.getElementById("rounds-el");
 
-let computer = {
+const computer = {
     alive: true,
     choice: null,
     wins: 0
 };
-let user = {
+const user = {
     alive: true,
     choice: null,
     wins: 0
 };
 
-let gameElements = document.getElementById("game-elements");
+const gameElements = document.getElementById("game-elements");
 gameElements.style.display = "none";
 
 function setRounds() {
-    let setRoundsEl = document.getElementById("set-rounds-el");
+    const setRoundsEl = document.getElementById("set-rounds-el");
     rounds = setRoundsEl.value;
 
-    let setupEl = document.getElementById("setup-el");
+    const setupEl = document.getElementById("setup-el");
     setupEl.style.display = "none";
 
     roundsEl.innerText = rounds.toString();
@@ -49,8 +45,11 @@ function changeBackground() {
     document.getElementById("change-bg-btn").style.display = "none";
 }
 
-let statsEl = document.getElementById("stats-el");
+const statsEl = document.getElementById("stats-el");
 statsEl.style.display = "none";
+
+const newGameBtn = document.getElementById("new-game-btn");
+newGameBtn.style.display = "none";
 
 drawUI();
 
@@ -146,14 +145,15 @@ function fight() {
         } else {
             gameOverEl.innerText = "Gamer over! It's a tie! 👔";
         }
+        newGameBtn.style.display = "";
     }
     roundsEl.innerText = rounds.toString();
 
-    statsEl.style.display = "table";
+    statsEl.style.display = "";
 
-    let userWinsEl = document.getElementById("user-wins-el");
-    let computerWinsEl = document.getElementById("computer-wins-el");
-    let drawsEl = document.getElementById("draws-el");
+    const userWinsEl = document.getElementById("user-wins-el");
+    const computerWinsEl = document.getElementById("computer-wins-el");
+    const drawsEl = document.getElementById("draws-el");
 
     userWinsEl.innerText = user.wins;
     computerWinsEl.innerText = computer.wins;

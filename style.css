@@ -16,14 +16,22 @@ header {
     justify-content: center;
 }
 
+main {
+    padding: 20px;
+}
+
 button {
     /*width: 50px;*/
     padding: 2px 5px;
     margin: 10px 0;
 }
 
+h2 {
+    margin-top: 10px;
+}
+
 table {
-    width: 300px;
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -40,7 +48,7 @@ td {
 }
 
 #wrapper {
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
     background-color: rgb(255 255 255 / .6);
 }
