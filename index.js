@@ -16,7 +16,7 @@ const choices = new Map([
     ]
 ]);
 
-let rounds = Number(prompt("How many rounds?"));
+let rounds;
 console.log("rounds=" + rounds);
 /*let extendedGameMode = false;
 if (extendedGameMode) {
@@ -28,6 +28,7 @@ let nextRoundBtn = document.getElementById("next-round-btn");
 let fightBtn = document.getElementById("fight-btn");
 let userChoiceEl = document.getElementById("user-choice-el");
 let computerChoiceEl = document.getElementById("computer-choice-el");
+let roundsEl = document.getElementById("rounds-el");
 
 let computer = {
     alive: true,
@@ -40,8 +41,20 @@ let user = {
     wins: 0
 };
 
-let roundsEl = document.getElementById("rounds-el");
-roundsEl.innerText = rounds.toString();
+let gameElements = document.getElementById("game-elements");
+gameElements.style.display = "none";
+
+function setRounds() {
+    let setRoundsEl = document.getElementById("set-rounds-el");
+    rounds = setRoundsEl.value;
+
+    let setupEl = document.getElementById("setup-el");
+    setupEl.style.display = "none";
+
+    roundsEl.innerText = rounds.toString();
+
+    gameElements.style.display = "block";
+}
 
 let statsEl = document.getElementById("stats-el");
 statsEl.style.display = "none";

@@ -10,11 +10,13 @@
     <header>
         <h1>Rock, Paper, Scissors</h1>
     </header>
-    <!--<div class="setup">
-
-    </div>-->
     <main>
-        <div class="game-elements">
+        <div id="setup-el">
+            <p>How many rounds do you want to play?</p>
+            <input id="set-rounds-el" type="number">
+            <button onclick="setRounds()">Play</button>
+        </div>
+        <div id="game-elements">
             <h3>Rounds left: <span id="rounds-el"></span></h3>
             <h2>choose:</h2>
             <div class="choices">
